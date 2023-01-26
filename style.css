@@ -21,7 +21,7 @@ body {
   flex-direction: column;
   font-family: Roboto, sans-serif;
   font-size: 16px;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
     var(--image);
   background-size: cover;
   background-repeat: no-repeat;
@@ -32,7 +32,7 @@ body {
 header {
   display: flex;
   justify-content: center;
-  /* background-color: rgba(0, 0, 0, 0.3); */
+  /* background-color: rgba(255, 255, 255, 0.15); */
   padding: 5px;
   font-size: 18;
   position: absolute;
@@ -136,7 +136,7 @@ footer {
   font-size: 18px;
   padding: 10px;
   text-align: center;
-  /* background-color: rgba(0, 0, 0, 0.3); */
+  background-color: rgba(255, 255, 255, 0.15);
 }
 .footer-link {
   font-family: Roboto, sans-serif;
