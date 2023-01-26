@@ -8,6 +8,43 @@
     <title>Document</title>
   </head>
   <body>
+    <header>
+      <div>
+        <input id="input-text" type="text" placeholder="City name, CAP... " /><i
+          class="fa-solid fa-magnifying-glass"
+        ></i>
+      </div>
+    </header>
+    <div class="weather-main">
+      <div class="weather-today"></div>
+      <div class="weather-today-details">
+        <div class="today-detail-temp-max">
+          <div class="detail-icon">
+            <i class="fa-solid fa-temperature-arrow-up"></i>
+          </div>
+          <p class="detail-text">Highest Temperature</p>
+          <p id="temp-max" class="detail-value"></p>
+        </div>
+        <div class="today-detail-temp-min">
+          <div class="detail-icon">
+            <i class="fa-solid fa-temperature-arrow-down"></i>
+          </div>
+          <p class="detail-text">Lowest Temperature</p>
+          <p id="temp-min" class="detail-value"></p>
+        </div>
+        <div class="today-detail-precipitation">
+          <div class="detail-icon"><i class="fa-solid fa-droplet"></i></div>
+          <p class="detail-text">Precipitation</p>
+          <p id="precipitation" class="detail-value"></p>
+        </div>
+        <div class="today-detail-wind">
+          <div class="detail-icon"><i class="fa-solid fa-wind"></i></div>
+          <p class="detail-text">Wind</p>
+          <p id="wind" class="detail-value"></p>
+        </div>
+      </div>
+    </div>
+    <div class="weather-grid"></div>
     <script type="module" src="./javascript.js"></script>
     <script
       src="https://kit.fontawesome.com/2e94fa5060.js"

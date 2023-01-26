@@ -1,16 +1,132 @@
-* {
-  margin: 0;
-}
-body {
-  height: 100vh;
-  width: 100vw;
-  background-color: black;
-  color: white;
+:root {
+  --image: url("https://images.pexels.com/photos/1324803/pexels-photo-1324803.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
 }
 
 @font-face {
   font-family: Roboto;
   src: url(./Roboto-Regular.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  font-family: Roboto, sans-serif;
+  font-size: 16px;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    var(--image);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.wrapper {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+header {
+  display: flex;
+  justify-content: center;
+  /* background-color: rgba(0, 0, 0, 0.3); */
+  padding: 5px;
+  font-size: 18;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+header > div {
+  border-bottom: 2px solid white;
+  color: white;
+  padding: 5px;
+}
+input {
+  background: none;
+  border-style: none;
+  color: white;
+}
+input:focus {
+  outline: none;
+}
+.weather-main,
+.weather-grid {
+  padding: 80px;
+}
+.weather-main {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.weather-today {
+  text-align: center;
+}
+.city-name {
+  font-size: 52px;
+  margin-bottom: 10px;
+}
+.today-icon {
+  margin: 10px 0;
+  font-size: 72px;
+}
+.today-weather-text {
+  font-size: 36px;
+}
+.today-temp {
+  font-size: 52px;
+}
+
+.weather-today-details {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.weather-today-details > div {
+  display: grid;
+  grid-template: auto auto/ 1fr 4fr;
+  column-gap: 10px;
+}
+.detail-icon {
+  font-size: 36px;
+  justify-items: center;
+  align-items: center;
+  grid-row: 1 / 3;
+  grid-column: 1;
+}
+.detail-text {
+  font-size: 18px;
+  grid-row: 1/2;
+  grid-column-start: 2;
+}
+.detail-value {
+  font-size: 20px;
+  grid-row-start: 2;
+  grid-column-start: 2;
+}
+
+.weather-grid {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+.card-day {
+  font-size: 24px;
+}
+.card-weather-icon {
+  font-size: 36px;
+  margin: 10px 0;
+}
+.card-temp-max {
+  font-size: 36px;
+}
+.card-temp-min {
+  font-size: 14px;
 }
 
 footer {
@@ -20,7 +136,7 @@ footer {
   font-size: 18px;
   padding: 10px;
   text-align: center;
-  background-color: rgba(255, 255, 255, 0.07);
+  /* background-color: rgba(0, 0, 0, 0.3); */
 }
 .footer-link {
   font-family: Roboto, sans-serif;
