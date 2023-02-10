@@ -1,5 +1,6 @@
 :root {
-  --image: url("https://images.pexels.com/photos/1324803/pexels-photo-1324803.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+  --image22: url("https://images.pexels.com/photos/1324803/pexels-photo-1324803.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+  --image: url("https://source.unsplash.com/kcvlb727mn8");
 }
 
 @font-face {
@@ -10,6 +11,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -21,23 +23,30 @@ body {
   flex-direction: column;
   font-family: Roboto, sans-serif;
   font-size: 16px;
-  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-    var(--image);
+  /* background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    var(--image); */
+  background: var(--image);
   background-size: cover;
   background-repeat: no-repeat;
 }
-.wrapper {
-  background-color: rgba(255, 255, 255, 0.5);
+.weather-today,
+.weather-today-details,
+.weather-card,
+header,
+footer {
+  background-color: rgba(0, 0, 0, 0.5);
 }
+
 header {
   display: flex;
   justify-content: center;
   /* background-color: rgba(255, 255, 255, 0.15); */
   padding: 5px;
   font-size: 18;
-  position: absolute;
+  padding-bottom: 10px;
+  /* position: absolute;
   top: 0;
-  left: 0;
+  left: 0; */
   width: 100%;
 }
 header > div {
@@ -50,12 +59,15 @@ input {
   border-style: none;
   color: white;
 }
+input::placeholder {
+  color: white;
+}
 input:focus {
   outline: none;
 }
 .weather-main,
 .weather-grid {
-  padding: 80px;
+  padding: 20px 80px;
 }
 .weather-main {
   flex: 1;
@@ -66,6 +78,10 @@ input:focus {
 
 .weather-today {
   text-align: center;
+  padding: 30px;
+  border-radius: 20px;
+  height: 370px;
+  min-width: 220px;
 }
 .city-name {
   font-size: 52px;
@@ -85,7 +101,12 @@ input:focus {
 .weather-today-details {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   gap: 20px;
+  padding: 30px;
+  height: 370px;
+  border-radius: 20px;
+  min-width: 220px;
 }
 .weather-today-details > div {
   display: grid;
@@ -111,9 +132,16 @@ input:focus {
 }
 
 .weather-grid {
+  display: grid;
+  grid-template: auto / repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
+}
+.weather-card {
   display: flex;
-  justify-content: space-between;
-  text-align: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  border-radius: 20px;
 }
 .card-day {
   font-size: 24px;
@@ -130,16 +158,27 @@ input:focus {
 }
 
 footer {
-  position: absolute;
-  bottom: 0;
+  /* position: absolute;
+  bottom: 0; */
   width: 100%;
   font-size: 18px;
   padding: 10px;
   text-align: center;
-  background-color: rgba(255, 255, 255, 0.15);
 }
 .footer-link {
   font-family: Roboto, sans-serif;
   text-decoration: none;
   color: white;
+}
+
+@media (max-width: 1375px) {
+  * {
+  }
+  .weather-today,
+  .weather-today-details,
+  .weather-card,
+  .weather-main,
+  .weather-grid {
+    padding: 20px;
+  }
 }
