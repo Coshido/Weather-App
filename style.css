@@ -1,5 +1,4 @@
 :root {
-  --image22: url("https://images.pexels.com/photos/1324803/pexels-photo-1324803.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
   --image: url("https://source.unsplash.com/kcvlb727mn8");
 }
 
@@ -23,8 +22,6 @@ body {
   flex-direction: column;
   font-family: Roboto, sans-serif;
   font-size: 16px;
-  /* background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-    var(--image); */
   background: var(--image);
   background-size: cover;
   background-repeat: no-repeat;
@@ -40,13 +37,9 @@ footer {
 header {
   display: flex;
   justify-content: center;
-  /* background-color: rgba(255, 255, 255, 0.15); */
   padding: 5px;
   font-size: 18;
   padding-bottom: 10px;
-  /* position: absolute;
-  top: 0;
-  left: 0; */
   width: 100%;
 }
 header > div {
@@ -158,8 +151,6 @@ input:focus {
 }
 
 footer {
-  /* position: absolute;
-  bottom: 0; */
   width: 100%;
   font-size: 18px;
   padding: 10px;
