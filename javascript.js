@@ -187,13 +187,14 @@ function render(weatherArray) {
 }
 
 function renderToday(weather) {
-  console.log(weather);
   const weatherToday = document.querySelector(".weather-today");
   weatherToday.innerHTML = "";
 
   const todayCityName = document.createElement("p");
   todayCityName.classList.add("city-name");
-  todayCityName.textContent = weather.cityName;
+  todayCityName.textContent =
+    weather.cityName.charAt(0).toUpperCase() +
+    weather.cityName.slice(1).toLowerCase();
 
   const dayName = format(parseISO(weather.dayDate), "EEEE");
   const dayDate = format(parseISO(weather.dayDate), "dd-MM-yyyy");
